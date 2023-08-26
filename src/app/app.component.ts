@@ -16,6 +16,11 @@ export class AppComponent {
 
   musicas = new Observable<Music[]>();
 
+  // Form
+  id = '';
+  musica = 'Eu sou uma musica';
+  autor = ''
+
   constructor(private musicService: MusicService){
     // console.log('TÔ AQUI', environment.api);
     this.obterMusicasCadastradas();
@@ -26,5 +31,13 @@ export class AppComponent {
     //   .subscribe(musicas => this.musicas = musicas);
 
     this.musicas = this.musicService.obterMusicas();
+  }
+
+  cadastrarMusica(){
+    if (!this.musica || !this.autor)
+      return;
+
+    this.musicService.cadastrarMusica({ author: this.autor, text: this.musica })
+      .subscribe(_ => this.obterMusicasCadastradas());
   }
 }

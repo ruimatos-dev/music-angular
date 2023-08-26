@@ -9,12 +9,15 @@ import { Music } from "../models/music.model";
 
 export class MusicService {
 
-    private url = environment.api;
+    private url = `${environment.api}/musics`;
 
     constructor(private httpClient: HttpClient){
 
     }
     obterMusicas() {
-        return this.httpClient.get<Music[]>(this.url + '/musics');
+        return this.httpClient.get<Music[]>(this.url);
+    }
+    cadastrarMusica(musica: Music) {
+        return this.httpClient.post<Music>(this.url, musica);
     }
 }
