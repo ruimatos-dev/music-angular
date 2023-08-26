@@ -1,0 +1,29 @@
+{
+    "musics": [
+        {
+            "id":1,
+            "author": "Guns N' Roses",
+            "text": "Civil War"
+        },
+        {
+            "id":2,
+            "author": "AC/DC",
+            "text": "Back In Black"
+        },
+        {
+            "id":3,
+            "author": "Led Zeppelin",
+            "text": "Whole Lotta Love"
+        },
+        {
+            "id":4,
+            "author": "Banda Catedral",
+            "text": "Dom de Amar"
+        },
+        {
+            "id":5,
+            "author": "Biquini Cavadão",
+            "text": "Janaína"
+        }
+    ]
+}
